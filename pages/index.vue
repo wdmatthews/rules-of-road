@@ -68,7 +68,7 @@
           <span class="mx-auto text-h3">Results</span>
         </v-card-title>
         <p class="text-h5 text-center">
-          You got {{ score.toFixed(2) }}%
+          You got {{ score }} out of {{ questions.length }}
         </p>
         <v-card-text
           class="grey lighten-3 pa-4 text-center black--text"
@@ -199,7 +199,7 @@ export default {
         }
       }
       
-      this.score = score * 100 / this.questions.length
+      this.score = score
       this.isFinished = true
     },
   },
